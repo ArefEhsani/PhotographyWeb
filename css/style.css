@@ -40,6 +40,8 @@ header {
     z-index: 2;
 }
 
+
+
 /* style navbar */
 .nav-style a {
     color: rgb(219, 238, 255) !important;
@@ -454,7 +456,24 @@ header {
 
 /* footer */
 footer {
-    border-top: 3px dotted #999;
+    border-top: 3px dotted rgb(49, 49, 49);
     padding: 50px 0;
     text-align: center;
+}
+
+
+
+/* navbar header */
+.mno .active{
+    color: #FF8F00 !important;
+}
+.barnd{
+    position: absolute;
+    left: 0%;
+}
+@media screen and (max-width : 991px) {
+    .mno{
+        background: rgb(41, 41, 41) !important;
+        border-radius: 20px;
+    }
 }

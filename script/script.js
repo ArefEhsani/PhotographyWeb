@@ -1,4 +1,3 @@
-
 /* strat slider header */
 function ChangeBackground() {
         const image_urls = [
@@ -17,28 +16,37 @@ setInterval(ChangeBackground,2000)
 /* end slider header */
 
 
+
+
+
 /* strat counter number */
-const counters = document.querySelectorAll(".counter");
+window.addEventListener("scroll", e=>{
+    if (window.scrollY > 870 && window.scrollY < 990){
+        const counters = document.querySelectorAll(".counter");
 
-counters.forEach((counter) => {
-  counter.innerText = "0";
+        counters.forEach((counter) => {
+            counter.innerText = "0";
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const c = +counter.innerText;
+            const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const c = +counter.innerText;
 
-    const increment = target / 100;
+            const increment = target / 100;
 
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 10);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCounter();
-});
+            if (c < target) {
+                counter.innerText = `${Math.ceil(c + increment)}`;
+                setTimeout(updateCounter, 10);
+            } else {
+            counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+}})
 /* end counter number */
+
+
+
 
 
 
@@ -85,3 +93,10 @@ document.getElementById("btn-Vertical").onclick = function() {
     }
 }
 /* end portfolio */
+
+
+
+
+
+
+
